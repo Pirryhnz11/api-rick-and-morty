@@ -1,0 +1,40 @@
+<!DOCTYPE html> 
+<html lang="es"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Portal de Personajes</title> 
+    <script src="https://cdn.tailwindcss.com"></script> 
+</head>
+
+<body class="bg-slate-900 text-white font-sans min-h-screen flex flex-col items-center justify-center p-4">
+
+<!-- PANTALLA 1: VISTA DE BIENVENIDA                                  -->
+
+    <div id="pantalla-inicio" class="text-center bg-slate-800 p-8 rounded-2xl shadow-2xl border border-slate-700 max-w-md w-full">
+        <h1 class="text-3xl font-extrabold text-blue-400 mb-4">Galaxia de Personajes</h1>
+        <p class="text-slate-300 mb-6">Explora el directorio oficial con la lista detallada y estado de los habitantes de la serie.</p>
+        <button onclick="irAPantalla2()" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-6 rounded-xl transition duration-300 shadow-lg hover:scale-105">
+            Explorar Personajes
+        </button>
+        
+    </div>
+
+
+    
+    <!-- PANTALLA 2: VISTA DE CATALOGO / RESULTADOS                        -->
+    
+    <div id="pantalla-personajes" class="hidden text-center max-w-4xl w-full">
+        
+        <h2 class="text-3xl font-bold text-emerald-400 mb-6">Directorio Principal</h2>
+        <p id="mensaje-cargando" class="text-xl text-yellow-400 font-semibold mb-4">Cargando directorio...</p> 
+        <div id="contenedor-tarjetas" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8"></div> 
+        <button onclick="irAPantalla1()" class="bg-slate-700 hover:bg-slate-600 text-white font-bold py-3 px-8 rounded-xl transition duration-300">
+            ← Volver al Inicio
+        </button>
+        
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>
